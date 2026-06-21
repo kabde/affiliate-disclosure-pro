@@ -1,0 +1,62 @@
+/* Affiliate Disclosure Pro — Frontend Styles */
+
+.adp-disclosure {
+    margin: 20px 0;
+}
+
+.adp-disclosure p {
+    margin: 0;
+}
+
+.adp-icon {
+    margin-right: 8px;
+}
+
+/* Box */
+.adp-style-box {
+    background: var(--adp-bg, #f8f9fa);
+    border: 1px solid var(--adp-border, #e5e7eb);
+    border-radius: var(--adp-radius, 6px);
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--adp-color, #6b7280);
+}
+
+/* Banner */
+.adp-style-banner {
+    background: var(--adp-bg, #fffbeb);
+    border-left: 4px solid var(--adp-border, #ffc45e);
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--adp-color, #6b7280);
+}
+
+/* Inline */
+.adp-style-inline {
+    font-style: italic;
+    color: var(--adp-color, #9ca3af);
+    font-size: 0.85rem;
+}
+
+/* Minimal */
+.adp-style-minimal {
+    font-size: 0.75rem;
+    color: var(--adp-color, #9ca3af);
+}
+
+@media (max-width: 768px) {
+    .adp-style-box,
+    .adp-style-banner {
+        margin: 16px 0;
+        padding: 12px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .adp-disclosure {
+        transition: none;
+        animation: none;
+    }
+}
