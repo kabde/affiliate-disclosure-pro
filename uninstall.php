@@ -13,6 +13,10 @@ delete_option( 'adp_license_expires_at' );
 // Delete transients
 delete_transient( 'adp_license_valid' );
 delete_transient( 'adp_license_attempts' );
+delete_transient( 'adp_premium_fresh' );
+
+// Delete premium files
+delete_option( 'adp_premium_files' );
 
 // Remove capability
 $role = get_role( 'administrator' );
@@ -22,7 +26,10 @@ if ( $role ) {
 
 // Delete all _adp_ post meta
 global $wpdb;
-$wpdb->query( "DELETE FROM {$wpdb->postmeta} WHERE meta_key IN ('_adp_override', '_adp_custom_text', '_adp_position')" );
+$wpdb->query( $wpdb->prepare(
+    "DELETE FROM {$wpdb->postmeta} WHERE meta_key IN (%s, %s, %s)",
+    '_adp_override', '_adp_custom_text', '_adp_position'
+) );
 
 // Clean up cron
 wp_clear_scheduled_hook( 'adp_validate_license_cron' );

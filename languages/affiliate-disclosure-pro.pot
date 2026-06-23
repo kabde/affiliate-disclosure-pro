@@ -1,0 +1,700 @@
+# Copyright (C) 2024 Abderrahim KHALID
+# This file is distributed under the same license as the Affiliate Disclosure Pro plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Affiliate Disclosure Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: contact@khalid.digital\n"
+"POT-Creation-Date: 2024-01-01T00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Plugin Name of the plugin
+msgid "Affiliate Disclosure Pro"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Affiliate Disclosure"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Behavior:"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Global (follow settings)"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Enable disclosure"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Disable disclosure"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Custom text:"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Leave empty to use the global text."
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Position:"
+msgstr ""
+
+#: admin/class-adp-metabox.php admin/class-adp-settings.php
+msgid "Before content"
+msgstr ""
+
+#: admin/class-adp-metabox.php admin/class-adp-settings.php
+msgid "After content"
+msgstr ""
+
+#: admin/class-adp-metabox.php admin/class-adp-settings.php
+msgid "After header"
+msgstr ""
+
+#: admin/class-adp-metabox.php admin/class-adp-settings.php
+msgid "Before footer"
+msgstr ""
+
+#: admin/class-adp-metabox.php
+msgid "Both (before + after)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "You do not have sufficient permissions."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "License"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "General"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Targeting"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Appearance"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Documentation"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "License Active"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "License key"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Domain"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Expiration"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Expired on %s"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "%1$s (%2$d day remaining)"
+msgid_plural "%1$s (%2$d days remaining)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "%1$s (%2$d days remaining)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Lifetime (no expiration)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Deactivate license"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Activate your license"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Enter your license key to activate Affiliate Disclosure Pro."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Activate license"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "General settings"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Enable disclosures"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Automatically display affiliate disclosure notices"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Default text"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Preset FR"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Preset EN"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "The text that will be displayed as the affiliate disclosure notice."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Position"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "After header (wp_body_open)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Before footer (get_footer)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Both (before + after content)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Save"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Content types"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Post types"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Categories"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Targeted categories"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "All categories"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Leave empty to target all categories."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Default behavior"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Mode"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Opt-out"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Displayed everywhere, can be disabled per post"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Opt-in"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Hidden by default, can be enabled per post"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Style"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Display style"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Box (framed)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Banner (side bar)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Inline (italic)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Minimal (small text)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Background color"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Text color"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Border color"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Show icon"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Display an info icon before the text"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Border radius"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Additional CSS applied to the front-end."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Live preview"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Getting started"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Activate your license in the %s tab"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "default text"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Configure the %s in the General tab (use the FR or EN presets)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "position"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Choose the display %s (before/after content, header, footer)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "post types"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "categories"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Select the targeted %1$s and %2$s in the Targeting tab"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "appearance"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Customize the %s (style, colors, icon) in the Appearance tab"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "override"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "For each post, you can %s the behavior via the sidebar metabox"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Position options"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Description"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "The disclosure appears at the beginning of the post, before the first paragraph. Recommended for FTC compliance."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "The disclosure appears at the end of the post, after the last paragraph."
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Uses the %s hook. Appears at the top of the page, before any content."
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Uses the %s hook. Appears at the bottom of the page, just before the footer."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Both"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Displays the disclosure before AND after the content. Ideal for long posts."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Display styles"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Ideal for"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Box"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Framed with background, border and border-radius"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "General use, blogs, editorial sites"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Banner"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Bar with colored side border (callout style)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Modern sites, emphasis"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Inline"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Italic text, discreet, integrated into content"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Minimalist blogs, discreet integration"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Minimal"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Small gray text, very discreet"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Commercial sites, discreet legal notices"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Per-post override"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Each post has an %s metabox in the editor sidebar. Three options:"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Global"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Follows the behavior defined in settings (opt-in/opt-out)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Enable"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Forces the disclosure on this post + allows custom text"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Disable"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Hides the disclosure on this post"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "When \"Enable\" is selected, you can write a specific text and choose a different position."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Shortcode"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Result"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Displays the disclosure exactly where the shortcode is placed. Uses the global text or the custom text of the post."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "The shortcode ignores the configured position — it displays exactly where you place it in the content."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "FTC Compliance"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "The Federal Trade Commission (FTC) requires content creators to clearly disclose their affiliate relationships. Affiliate Disclosure Pro helps you:"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Automatically display a notice on all posts containing affiliate links"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "before the first affiliate link"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Place the disclosure visibly (FTC recommendation: %s)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Use clear and understandable language"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Make the disclosure visually distinct from the content"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Note: This plugin facilitates compliance but does not constitute legal advice. Consult a lawyer for your specific obligations."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Category targeting"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "In the %s tab, you can select the categories on which the disclosure will be displayed:"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "No category checked"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "all categories are targeted"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Selected categories"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "only posts in those categories display the disclosure"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "A post in multiple categories will display the disclosure if at least one is targeted"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Post type targeting"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Posts (post)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "By default, only %s are targeted. You can add custom post types:"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Blog posts"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Static pages"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "custom post type"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Any public %s registered in WordPress"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "The override metabox only appears on selected post types."
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "license key"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "The plugin requires a %s in the format %s"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "The license is validated automatically every 72 hours"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Depending on your license, it can be single-domain (one site) or multi-domain (unlimited)"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "If you change domains, first deactivate the license on the old domain"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Plugin updates are automatic via the WordPress admin"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "Support"
+msgstr ""
+
+#: admin/class-adp-settings.php
+msgid "For any questions or issues:"
+msgstr ""
+
+#: admin/class-adp-settings.php
+#, php-format
+msgid "Email: %s"
+msgstr ""
+
+#. JS strings (inline script in class-adp-settings.php)
+msgid "Activating..."
+msgstr ""
+
+#. JS strings (inline script in class-adp-settings.php)
+msgid "Connection error."
+msgstr ""
+
+#. JS strings (inline script in class-adp-settings.php)
+msgid "Deactivate the license on this domain?"
+msgstr ""
+
+#. JS strings (inline script in class-adp-settings.php)
+msgid "Deactivating..."
+msgstr ""
+
+#: inc/license.php
+msgid "Too many attempts. Please try again in one minute."
+msgstr ""
+
+#: inc/license.php
+msgid "Invalid license format."
+msgstr ""
+
+#: inc/license.php
+#, php-format
+msgid "Connection error: %s"
+msgstr ""
+
+#: inc/license.php
+msgid "License activated."
+msgstr ""
+
+#: inc/license.php
+msgid "Activation failed."
+msgstr ""
+
+#: inc/license.php
+#, php-format
+msgid "Please <a href=\"%s\">activate your license</a> to use the plugin."
+msgstr ""
+
+#: inc/license.php
+#, php-format
+msgid "Your license has expired. <a href=\"%s\">Renew</a>"
+msgstr ""
+
+#: inc/license.php
+#, php-format
+msgid "Your license expires in %1$d day. <a href=\"%2$s\">View</a>"
+msgid_plural "Your license expires in %1$d days. <a href=\"%2$s\">View</a>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/license.php
+msgid "Permission denied."
+msgstr ""
+
+#: inc/license.php
+msgid "License deactivated."
+msgstr ""

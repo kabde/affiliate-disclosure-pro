@@ -23,7 +23,7 @@ class ADP_Metabox {
         foreach ( $post_types as $pt ) {
             add_meta_box(
                 'adp-disclosure-metabox',
-                'Affiliate Disclosure',
+                __( 'Affiliate Disclosure', 'affiliate-disclosure-pro' ),
                 [ $this, 'render' ],
                 $pt,
                 'side',
@@ -50,36 +50,36 @@ class ADP_Metabox {
         }
         ?>
         <div style="line-height:1.8;">
-            <p style="margin:0 0 10px;font-weight:600;color:#374151;">Comportement :</p>
+            <p style="margin:0 0 10px;font-weight:600;color:#374151;"><?php esc_html_e( 'Behavior:', 'affiliate-disclosure-pro' ); ?></p>
 
             <label style="display:block;margin-bottom:4px;">
                 <input type="radio" name="adp_override" value="global" <?php checked( $override, 'global' ); ?>>
-                Global (suivre les r&eacute;glages)
+                <?php esc_html_e( 'Global (follow settings)', 'affiliate-disclosure-pro' ); ?>
             </label>
             <label style="display:block;margin-bottom:4px;">
                 <input type="radio" name="adp_override" value="enable" <?php checked( $override, 'enable' ); ?>>
-                Activer la divulgation
+                <?php esc_html_e( 'Enable disclosure', 'affiliate-disclosure-pro' ); ?>
             </label>
             <label style="display:block;margin-bottom:4px;">
                 <input type="radio" name="adp_override" value="disable" <?php checked( $override, 'disable' ); ?>>
-                D&eacute;sactiver la divulgation
+                <?php esc_html_e( 'Disable disclosure', 'affiliate-disclosure-pro' ); ?>
             </label>
 
             <div id="adp-custom-text-wrap" style="margin-top:12px;<?php echo $override !== 'enable' ? 'display:none;' : ''; ?>">
-                <p style="margin:0 0 4px;font-weight:600;color:#374151;">Texte personnalis&eacute; :</p>
+                <p style="margin:0 0 4px;font-weight:600;color:#374151;"><?php esc_html_e( 'Custom text:', 'affiliate-disclosure-pro' ); ?></p>
                 <textarea name="adp_custom_text" rows="4" style="width:100%;"><?php echo esc_textarea( $custom_text ); ?></textarea>
-                <p class="description">Laissez vide pour utiliser le texte global.</p>
+                <p class="description"><?php esc_html_e( 'Leave empty to use the global text.', 'affiliate-disclosure-pro' ); ?></p>
             </div>
 
             <div id="adp-position-wrap" style="margin-top:12px;<?php echo $override === 'disable' ? 'display:none;' : ''; ?>">
-                <p style="margin:0 0 4px;font-weight:600;color:#374151;">Position :</p>
+                <p style="margin:0 0 4px;font-weight:600;color:#374151;"><?php esc_html_e( 'Position:', 'affiliate-disclosure-pro' ); ?></p>
                 <select name="adp_position" style="width:100%;">
-                    <option value="global" <?php selected( $position, 'global' ); ?>>Global (suivre les r&eacute;glages)</option>
-                    <option value="before_content" <?php selected( $position, 'before_content' ); ?>>Avant le contenu</option>
-                    <option value="after_content" <?php selected( $position, 'after_content' ); ?>>Apr&egrave;s le contenu</option>
-                    <option value="after_header" <?php selected( $position, 'after_header' ); ?>>Apr&egrave;s le header</option>
-                    <option value="before_footer" <?php selected( $position, 'before_footer' ); ?>>Avant le footer</option>
-                    <option value="both" <?php selected( $position, 'both' ); ?>>Les deux (avant + apr&egrave;s)</option>
+                    <option value="global" <?php selected( $position, 'global' ); ?>><?php esc_html_e( 'Global (follow settings)', 'affiliate-disclosure-pro' ); ?></option>
+                    <option value="before_content" <?php selected( $position, 'before_content' ); ?>><?php esc_html_e( 'Before content', 'affiliate-disclosure-pro' ); ?></option>
+                    <option value="after_content" <?php selected( $position, 'after_content' ); ?>><?php esc_html_e( 'After content', 'affiliate-disclosure-pro' ); ?></option>
+                    <option value="after_header" <?php selected( $position, 'after_header' ); ?>><?php esc_html_e( 'After header', 'affiliate-disclosure-pro' ); ?></option>
+                    <option value="before_footer" <?php selected( $position, 'before_footer' ); ?>><?php esc_html_e( 'Before footer', 'affiliate-disclosure-pro' ); ?></option>
+                    <option value="both" <?php selected( $position, 'both' ); ?>><?php esc_html_e( 'Both (before + after)', 'affiliate-disclosure-pro' ); ?></option>
                 </select>
             </div>
         </div>

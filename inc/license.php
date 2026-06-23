@@ -31,13 +31,13 @@ function adp_is_licensed() {
 function adp_activate_license( $key ) {
     $attempts = (int) get_transient( 'adp_license_attempts' );
     if ( $attempts >= 5 ) {
-        return [ 'success' => false, 'message' => 'Trop de tentatives. Réessayez dans une minute.' ];
+        return [ 'success' => false, 'message' => __( 'Too many attempts. Please try again in one minute.', 'affiliate-disclosure-pro' ) ];
     }
     set_transient( 'adp_license_attempts', $attempts + 1, MINUTE_IN_SECONDS );
 
     $key = strtoupper( sanitize_text_field( trim( $key ) ) );
     if ( ! preg_match( '/^ADP-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/', $key ) ) {
-        return [ 'success' => false, 'message' => 'Format de licence invalide.' ];
+        return [ 'success' => false, 'message' => __( 'Invalid license format.', 'affiliate-disclosure-pro' ) ];
     }
 
     $response = wp_remote_post( ADP_API_URL . '/activate', [
@@ -52,7 +52,8 @@ function adp_activate_license( $key ) {
 
     if ( is_wp_error( $response ) ) {
         error_log( '[ADP] License activation error: ' . $response->get_error_message() );
-        return [ 'success' => false, 'message' => 'Erreur de connexion: ' . $response->get_error_message() ];
+        /* translators: %s: error message from WordPress */
+        return [ 'success' => false, 'message' => sprintf( __( 'Connection error: %s', 'affiliate-disclosure-pro' ), $response->get_error_message() ) ];
     }
 
     $body = json_decode( wp_remote_retrieve_body( $response ), true );
@@ -65,10 +66,10 @@ function adp_activate_license( $key ) {
             update_option( 'adp_license_expires_at', sanitize_text_field( $body['expires_at'] ) );
         }
         set_transient( 'adp_license_valid', 1, 72 * HOUR_IN_SECONDS );
-        return [ 'success' => true, 'message' => $body['message'] ?? 'Licence activée.' ];
+        return [ 'success' => true, 'message' => $body['message'] ?? __( 'License activated.', 'affiliate-disclosure-pro' ) ];
     }
 
-    return [ 'success' => false, 'message' => $body['message'] ?? 'Activation échouée.' ];
+    return [ 'success' => false, 'message' => $body['message'] ?? __( 'Activation failed.', 'affiliate-disclosure-pro' ) ];
 }
 
 /**
@@ -190,7 +191,8 @@ function adp_admin_notice_no_license() {
 
     echo '<div class="notice notice-warning"><p>';
     echo '<strong>Affiliate Disclosure Pro</strong> — ';
-    echo 'Veuillez <a href="' . esc_url( admin_url( 'admin.php?page=adp-settings' ) ) . '">activer votre licence</a> pour utiliser le plugin.';
+    /* translators: %s: URL to the settings page */
+    printf( __( 'Please <a href="%s">activate your license</a> to use the plugin.', 'affiliate-disclosure-pro' ), esc_url( admin_url( 'admin.php?page=adp-settings' ) ) );
     echo '</p></div>';
 }
 add_action( 'admin_notices', 'adp_admin_notice_no_license' );
@@ -205,9 +207,20 @@ function adp_admin_notice_expiring() {
     if ( $screen && $screen->id === 'toplevel_page_adp-settings' ) return;
 
     if ( $days <= 0 ) {
-        echo '<div class="notice notice-error"><p><strong>Affiliate Disclosure Pro</strong> — Votre licence a expiré. <a href="' . esc_url( admin_url( 'admin.php?page=adp-settings' ) ) . '">Renouveler</a></p></div>';
+        echo '<div class="notice notice-error"><p><strong>Affiliate Disclosure Pro</strong> — ';
+        /* translators: %s: URL to the settings page */
+        printf( __( 'Your license has expired. <a href="%s">Renew</a>', 'affiliate-disclosure-pro' ), esc_url( admin_url( 'admin.php?page=adp-settings' ) ) );
+        echo '</p></div>';
     } else {
-        echo '<div class="notice notice-warning"><p><strong>Affiliate Disclosure Pro</strong> — Votre licence expire dans ' . $days . ' jour' . ($days > 1 ? 's' : '') . '. <a href="' . esc_url( admin_url( 'admin.php?page=adp-settings' ) ) . '">Voir</a></p></div>';
+        echo '<div class="notice notice-warning"><p><strong>Affiliate Disclosure Pro</strong> — ';
+        /* translators: 1: number of days, 2: URL to the settings page */
+        printf( _n(
+            'Your license expires in %1$d day. <a href="%2$s">View</a>',
+            'Your license expires in %1$d days. <a href="%2$s">View</a>',
+            $days,
+            'affiliate-disclosure-pro'
+        ), $days, esc_url( admin_url( 'admin.php?page=adp-settings' ) ) );
+        echo '</p></div>';
     }
 }
 add_action( 'admin_notices', 'adp_admin_notice_expiring' );
@@ -217,7 +230,7 @@ add_action( 'admin_notices', 'adp_admin_notice_expiring' );
  */
 function adp_ajax_activate_license() {
     check_ajax_referer( 'adp_license_nonce', 'nonce' );
-    if ( ! current_user_can( 'manage_options' ) ) wp_send_json_error( 'Permission refusée.' );
+    if ( ! current_user_can( 'manage_options' ) ) wp_send_json_error( __( 'Permission denied.', 'affiliate-disclosure-pro' ) );
 
     $key = isset( $_POST['license_key'] ) ? sanitize_text_field( wp_unslash( $_POST['license_key'] ) ) : '';
     $result = adp_activate_license( $key );
@@ -232,10 +245,10 @@ add_action( 'wp_ajax_adp_activate_license', 'adp_ajax_activate_license' );
 
 function adp_ajax_deactivate_license() {
     check_ajax_referer( 'adp_license_nonce', 'nonce' );
-    if ( ! current_user_can( 'manage_options' ) ) wp_send_json_error( 'Permission refusée.' );
+    if ( ! current_user_can( 'manage_options' ) ) wp_send_json_error( __( 'Permission denied.', 'affiliate-disclosure-pro' ) );
 
     adp_deactivate_license();
-    wp_send_json_success( 'Licence désactivée.' );
+    wp_send_json_success( __( 'License deactivated.', 'affiliate-disclosure-pro' ) );
 }
 add_action( 'wp_ajax_adp_deactivate_license', 'adp_ajax_deactivate_license' );
 

@@ -23,6 +23,11 @@ define( 'ADP_URL',  plugin_dir_url( __FILE__ ) );
 define( 'ADP_CAPABILITY', 'manage_adp' );
 define( 'ADP_API_URL', 'https://dp-starter.khalid.digital' );
 
+// Load translations
+add_action( 'init', function() {
+    load_plugin_textdomain( 'affiliate-disclosure-pro', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+});
+
 // License system FIRST
 require_once ADP_PATH . 'inc/license.php';
 

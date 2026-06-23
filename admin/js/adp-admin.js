@@ -1,7 +1,7 @@
 jQuery(function($) {
     // Preset buttons
     $('#adp-preset-fr').on('click', function() {
-        $('textarea[name="adp_settings[text]"]').val("Cet article contient des liens d'affiliation. Si vous effectuez un achat via ces liens, nous pouvons percevoir une commission, sans frais supplémentaires pour vous.");
+        $('textarea[name="adp_settings[text]"]').val("Cet article contient des liens d'affiliation. Si vous effectuez un achat via ces liens, nous pouvons percevoir une commission, sans frais suppl\u00e9mentaires pour vous.");
     });
     $('#adp-preset-en').on('click', function() {
         $('textarea[name="adp_settings[text]"]').val("This post contains affiliate links. If you make a purchase through these links, we may earn a commission at no extra cost to you.");
@@ -25,7 +25,7 @@ jQuery(function($) {
         $('#adp-position-wrap').toggle(current !== 'disable');
     }
 
-    // Live preview in Apparence tab
+    // Live preview in Appearance tab
     function updatePreview() {
         var style = $('select[name="adp_settings[style]"]').val() || 'box';
         var bg = $('input[name="adp_settings[color_bg]"]').val() || '#f8f9fa';

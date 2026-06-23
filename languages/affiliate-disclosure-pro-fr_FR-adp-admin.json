@@ -1,0 +1,20 @@
+{
+    "translation-revision-date": "2024-01-01T00:00:00+00:00",
+    "generator": "hand-coded",
+    "source": "admin/js/adp-admin.js",
+    "domain": "affiliate-disclosure-pro",
+    "locale_data": {
+        "affiliate-disclosure-pro": {
+            "": {
+                "domain": "affiliate-disclosure-pro",
+                "lang": "fr_FR",
+                "plural-forms": "nplurals=2; plural=(n > 1);"
+            },
+            "Activating...": ["Activation..."],
+            "Activate license": ["Activer la licence"],
+            "Connection error.": ["Erreur de connexion."],
+            "Deactivate the license on this domain?": ["D\u00e9sactiver la licence sur ce domaine ?"],
+            "Deactivating...": ["D\u00e9sactivation..."]
+        }
+    }
+}
