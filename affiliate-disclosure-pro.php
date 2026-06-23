@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Affiliate Disclosure Pro
  * Description: Automatic affiliate disclosure management with per-article overrides, multiple styles, and FTC compliance.
- * Version:     1.1.0
+ * Version:     1.2.0
  * Author:      Abderrahim KHALID
  * Text Domain: affiliate-disclosure-pro
  * Network:     true
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ADP_VERSION', '1.1.0' );
+define( 'ADP_VERSION', '1.2.0' );
 define( 'ADP_FILE', __FILE__ );
 define( 'ADP_BASENAME', plugin_basename( __FILE__ ) );
 define( 'ADP_PATH', plugin_dir_path( __FILE__ ) );
